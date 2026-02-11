@@ -54,11 +54,15 @@ Analiza el código fuente, estructura de carpetas, configuraciones y dependencia
 - **Testing**: Unit tests, integration, E2E (Cypress, Playwright, etc.)
 - **Build**: Proceso de compilación, optimizaciones, variables de entorno
 
-#### DEVOPS
-- **Docker**: Comandos principales, docker-compose, servicios
-- **CI/CD**: Pipeline descrito paso a paso, triggers
-- **Deployment**: Proceso para cada ambiente, variables por ambiente
-- **Monitoreo**: Herramientas, logs, métricas
+#### DEVOPS (General - No específico de plataforma)
+- **Containerización**: Uso de Docker, servicios, volumes, networks
+- **CI/CD**: Pipeline descrito paso a paso de forma agnóstica (build, test, deploy)
+- **Ambientes**: Descripción de ambientes (dev, staging, prod) y sus diferencias
+- **Variables de entorno por ambiente**: Qué variables cambian entre ambientes
+- **Proceso de deployment**: Pasos generales sin depender de plataforma específica
+- **Monitoreo y Logs**: Estrategias generales, qué monitorear, niveles de log
+- **Backups**: Estrategia de respaldos recomendada
+- **Escalabilidad**: Consideraciones para escalar horizontal/verticalmente
 
 #### GUÍAS ADICIONALES
 - **Convenciones de código**: Naming conventions, estructura de archivos, best practices
@@ -94,12 +98,56 @@ Analiza el código fuente, estructura de carpetas, configuraciones y dependencia
 7. Verifica que toda la información sea precisa
 
 ## ENTREGA
-Genera la documentación organizada en los archivos markdown apropiados:
-- `README.md` - Visión general y quick start
-- `CONTRIBUTING.md` - Guía de contribución
-- `ARCHITECTURE.md` - Arquitectura detallada
-- `API.md` - Documentación de API (backend)
-- `COMPONENTS.md` - Documentación de componentes (frontend)
-- `DEPLOYMENT.md` - Guía de deployment
+Genera la documentación organizada en los siguientes archivos markdown:
 
-Asegúrate de que cada documento sea autocontenido pero con referencias cruzadas cuando sea necesario.
+1. **`DOCUMENTATION.md`** - 📚 **DOCUMENTO MAESTRO CONSOLIDADO**
+   - Condensado completo con TODA la información técnica del proyecto
+   - Incluye todas las secciones de todos los demás documentos
+   - Tabla de contenidos completa y navegable
+   - Sirve como referencia única y completa del proyecto
+   - Formato: Todas las secciones organizadas jerárquicamente en un solo archivo
+
+2. **`README.md`** - Visión general y quick start
+   - Descripción del proyecto
+   - Instalación rápida
+   - Comandos básicos
+   - Links a documentación detallada
+
+3. **`ARCHITECTURE.md`** - Arquitectura detallada
+   - Decisiones arquitectónicas
+   - Diagramas de componentes
+   - Flujo de datos
+   - Patrones utilizados
+
+4. **`API.md`** - Documentación de API (si aplica backend)
+   - Todos los endpoints
+   - Autenticación y autorización
+   - Ejemplos de requests/responses
+   - Códigos de error
+
+5. **`COMPONENTS.md`** - Documentación de componentes (si aplica frontend)
+   - Catálogo de componentes
+   - Props y tipos
+   - Ejemplos de uso
+   - Guías de estilo
+
+6. **`DEPLOYMENT.md`** - Guía de deployment (General, no específica de plataforma)
+   - Requisitos generales para deployment
+   - Proceso de build
+   - Variables de entorno por ambiente
+   - Consideraciones de seguridad
+   - Estrategias de CI/CD agnósticas
+   - Checklist pre-deployment
+
+7. **`CONTRIBUTING.md`** - Guía de contribución
+   - Gitflow y branching
+   - Convenciones de código
+   - Proceso de PR
+   - Testing requerido
+
+## NOTAS IMPORTANTES
+- El archivo `DOCUMENTATION.md` debe ser COMPLETO y AUTOCONTENIDO
+- Los demás archivos son versiones especializadas/resumidas de secciones específicas
+- `DEPLOYMENT.md` debe ser agnóstico de plataforma (no asumir AWS, Azure, Vercel, etc.)
+- Cada documento debe tener su propia tabla de contenidos
+- Incluye referencias cruzadas entre documentos cuando sea apropiado
