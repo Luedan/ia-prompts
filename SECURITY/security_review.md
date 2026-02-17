@@ -4,7 +4,7 @@ Objetivo:
 Realizar una validación de seguridad de código fuente similar a una auditoría SAST/manual, y entregar un reporte ejecutivo + técnico priorizado.
 
 Contexto de evaluación:
-- Tipo de sistema: aplicación web fullstack (backend + frontend).
+- Tipo de sistema: aplicación web fullstack (backend + frontend) (Aca en tipo de sistema se puede cambiar por el sistema que sea que se este probando).
 - Analiza código fuente, configuración, scripts, dependencias y prácticas de seguridad.
 - Evalúa autenticación, autorización, manejo de sesión, validación de entrada, secretos, logging, CORS, CSP, cabeceras HTTP, criptografía y exposición de datos.
 
